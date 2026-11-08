@@ -1,0 +1,1815 @@
+/* ==========================================================================
+   UI PARADIGMS & DESIGN STYLES STYLESHEET
+   12 Distinct UI Styles with authentic CSS formulas, shadows, and tokens
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. MINIMALISM / SWISS CLEAN
+   Characteristics: Ultra clean, hairline borders, high typography contrast, 
+   generous breathing room, monochrome + single subtle accent
+   -------------------------------------------------------------------------- */
+.style-minimalism {
+  --min-bg: #ffffff;
+  --min-card-bg: #fafafa;
+  --min-border: #e4e4e7;
+  --min-border-focus: #18181b;
+  --min-text: #09090b;
+  --min-muted: #71717a;
+  --min-accent: #18181b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.style-minimalism .demo-card {
+  background: var(--min-bg);
+  border: 1px solid var(--min-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  color: var(--min-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.style-minimalism .demo-card:hover {
+  border-color: #d4d4d8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.style-minimalism .demo-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  background: #f4f4f5;
+  color: #52525b;
+  border: 1px solid #e4e4e7;
+}
+
+.style-minimalism .demo-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0.75rem 0 0.35rem;
+  color: var(--min-text);
+}
+
+.style-minimalism .demo-desc {
+  font-size: 0.85rem;
+  color: var(--min-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.style-minimalism .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  background: #09090b;
+  color: #ffffff;
+  border: 1px solid #09090b;
+  border-radius: 6px;
+  font-size: 0.825rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.style-minimalism .demo-btn-primary:hover {
+  opacity: 0.88;
+}
+
+.style-minimalism .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  background: transparent;
+  color: #09090b;
+  border: 1px solid #e4e4e7;
+  border-radius: 6px;
+  font-size: 0.825rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.style-minimalism .demo-btn-secondary:hover {
+  background: #f4f4f5;
+  border-color: #d4d4d8;
+}
+
+.style-minimalism .demo-input {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  background: #ffffff;
+  border: 1px solid var(--min-border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--min-text);
+  outline: none;
+  transition: border-color 0.2s ease;
+  margin-bottom: 0.75rem;
+}
+
+.style-minimalism .demo-input:focus {
+  border-color: var(--min-border-focus);
+}
+
+.style-minimalism .demo-toggle {
+  width: 40px;
+  height: 22px;
+  background: #e4e4e7;
+  border-radius: 11px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.style-minimalism .demo-toggle.active {
+  background: #09090b;
+}
+
+.style-minimalism .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.style-minimalism .demo-toggle.active::after {
+  transform: translateX(18px);
+}
+
+
+/* --------------------------------------------------------------------------
+   2. NEO-BRUTALISM
+   Characteristics: Thick solid 3px-4px black borders, hard zero-blur offset 
+   drop-shadows, hyper-vibrant pop colors, bold typography, playful geometry
+   -------------------------------------------------------------------------- */
+.style-neobrutalism {
+  --neo-bg: #FFFDF0;
+  --neo-yellow: #FFE600;
+  --neo-cyan: #00F0FF;
+  --neo-pink: #FF66C4;
+  --neo-lime: #55E67A;
+  --neo-black: #000000;
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+}
+
+.style-neobrutalism .demo-card {
+  background: #ffffff;
+  border: 3px solid var(--neo-black);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0px var(--neo-black);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 340px;
+  color: var(--neo-black);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.style-neobrutalism .demo-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px var(--neo-black);
+}
+
+.style-neobrutalism .demo-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: var(--neo-yellow);
+  border: 2px solid var(--neo-black);
+  box-shadow: 2px 2px 0px var(--neo-black);
+  color: var(--neo-black);
+}
+
+.style-neobrutalism .demo-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin: 0.85rem 0 0.4rem;
+  color: var(--neo-black);
+}
+
+.style-neobrutalism .demo-desc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+
+.style-neobrutalism .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.25rem;
+  background: var(--neo-cyan);
+  color: var(--neo-black);
+  border: 3px solid var(--neo-black);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px var(--neo-black);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.style-neobrutalism .demo-btn-primary:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--neo-black);
+  background: #1affea;
+}
+
+.style-neobrutalism .demo-btn-primary:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px var(--neo-black);
+}
+
+.style-neobrutalism .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.25rem;
+  background: #ffffff;
+  color: var(--neo-black);
+  border: 3px solid var(--neo-black);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px var(--neo-black);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.style-neobrutalism .demo-btn-secondary:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--neo-black);
+  background: #fafafa;
+}
+
+.style-neobrutalism .demo-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: #ffffff;
+  border: 3px solid var(--neo-black);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--neo-black);
+  outline: none;
+  box-shadow: 3px 3px 0px var(--neo-black);
+  margin-bottom: 0.75rem;
+}
+
+.style-neobrutalism .demo-input:focus {
+  background: #fffff0;
+  box-shadow: 5px 5px 0px var(--neo-black);
+}
+
+.style-neobrutalism .demo-toggle {
+  width: 48px;
+  height: 26px;
+  background: #ffffff;
+  border: 3px solid var(--neo-black);
+  border-radius: 13px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px var(--neo-black);
+}
+
+.style-neobrutalism .demo-toggle.active {
+  background: var(--neo-lime);
+}
+
+.style-neobrutalism .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: var(--neo-black);
+  border-radius: 50%;
+  transition: transform 0.15s ease;
+}
+
+.style-neobrutalism .demo-toggle.active::after {
+  transform: translateX(20px);
+}
+
+
+/* --------------------------------------------------------------------------
+   3. GLASSMORPHISM
+   Characteristics: Frosted glass blur (backdrop-filter), translucent surfaces, 
+   thin luminous specular borders, layered gradient lighting
+   -------------------------------------------------------------------------- */
+.style-glassmorphism {
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-card: rgba(255, 255, 255, 0.14);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-highlight: rgba(255, 255, 255, 0.4);
+  --glass-text: #ffffff;
+  --glass-muted: rgba(255, 255, 255, 0.7);
+}
+
+.style-glassmorphism .demo-card {
+  background: var(--glass-card);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-highlight);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.35);
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 340px;
+  color: var(--glass-text);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.style-glassmorphism .demo-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 18px 48px 0 rgba(0, 0, 0, 0.45);
+}
+
+.style-glassmorphism .demo-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.style-glassmorphism .demo-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0.85rem 0 0.4rem;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.style-glassmorphism .demo-desc {
+  font-size: 0.85rem;
+  color: var(--glass-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.style-glassmorphism .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.style-glassmorphism .demo-btn-primary:hover {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.style-glassmorphism .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.style-glassmorphism .demo-btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.style-glassmorphism .demo-input {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  outline: none;
+  backdrop-filter: blur(8px);
+  margin-bottom: 0.75rem;
+  transition: border-color 0.2s ease;
+}
+
+.style-glassmorphism .demo-input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.style-glassmorphism .demo-toggle {
+  width: 44px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.style-glassmorphism .demo-toggle.active {
+  background: rgba(56, 189, 248, 0.4);
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+.style-glassmorphism .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.style-glassmorphism .demo-toggle.active::after {
+  transform: translateX(20px);
+}
+
+
+/* --------------------------------------------------------------------------
+   4. NEUMORPHISM (SOFT UI)
+   Characteristics: Dual inner/outer soft shadows creating an extruded plastic
+   monochromatic effect, embossed/debossed tactile physical feel
+   -------------------------------------------------------------------------- */
+.style-neumorphism {
+  --neu-bg: #e0e5ec;
+  --neu-shadow-dark: #bebebe;
+  --neu-shadow-light: #ffffff;
+  --neu-text: #4a5568;
+  --neu-accent: #3182ce;
+}
+
+.style-neumorphism .demo-card {
+  background: var(--neu-bg);
+  border-radius: 24px;
+  box-shadow: 10px 10px 20px var(--neu-shadow-dark), 
+              -10px -10px 20px var(--neu-shadow-light);
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 340px;
+  color: var(--neu-text);
+  border: none;
+  transition: box-shadow 0.25s ease;
+}
+
+.style-neumorphism .demo-card:hover {
+  box-shadow: 14px 14px 25px var(--neu-shadow-dark), 
+              -14px -14px 25px var(--neu-shadow-light);
+}
+
+.style-neumorphism .demo-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--neu-bg);
+  box-shadow: inset 3px 3px 6px var(--neu-shadow-dark), 
+              inset -3px -3px 6px var(--neu-shadow-light);
+  color: #4a5568;
+}
+
+.style-neumorphism .demo-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.85rem 0 0.4rem;
+  color: #2d3748;
+}
+
+.style-neumorphism .demo-desc {
+  font-size: 0.85rem;
+  color: #718096;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.style-neumorphism .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.3rem;
+  background: var(--neu-bg);
+  color: #2b6cb0;
+  border: none;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px var(--neu-shadow-dark), 
+              -5px -5px 10px var(--neu-shadow-light);
+  transition: all 0.15s ease;
+}
+
+.style-neumorphism .demo-btn-primary:active {
+  box-shadow: inset 4px 4px 8px var(--neu-shadow-dark), 
+              inset -4px -4px 8px var(--neu-shadow-light);
+  color: #1a365d;
+}
+
+.style-neumorphism .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.3rem;
+  background: var(--neu-bg);
+  color: #718096;
+  border: none;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px var(--neu-shadow-dark), 
+              -4px -4px 8px var(--neu-shadow-light);
+  transition: all 0.15s ease;
+}
+
+.style-neumorphism .demo-btn-secondary:active {
+  box-shadow: inset 3px 3px 6px var(--neu-shadow-dark), 
+              inset -3px -3px 6px var(--neu-shadow-light);
+}
+
+.style-neumorphism .demo-input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  background: var(--neu-bg);
+  border: none;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  color: #2d3748;
+  outline: none;
+  box-shadow: inset 4px 4px 8px var(--neu-shadow-dark), 
+              inset -4px -4px 8px var(--neu-shadow-light);
+  margin-bottom: 0.75rem;
+}
+
+.style-neumorphism .demo-toggle {
+  width: 50px;
+  height: 26px;
+  background: var(--neu-bg);
+  border-radius: 13px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 3px 3px 6px var(--neu-shadow-dark), 
+              inset -3px -3px 6px var(--neu-shadow-light);
+}
+
+.style-neumorphism .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: var(--neu-bg);
+  border-radius: 50%;
+  box-shadow: 3px 3px 6px var(--neu-shadow-dark), 
+              -3px -3px 6px var(--neu-shadow-light);
+  transition: transform 0.2s ease;
+}
+
+.style-neumorphism .demo-toggle.active::after {
+  transform: translateX(24px);
+  background: #3182ce;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. CLAYMORPHISM
+   Characteristics: Puffy, inflatable 3D toy-like look, rounded corners,
+   colorful inner shadows creating volume, soft drop shadows
+   -------------------------------------------------------------------------- */
+.style-claymorphism {
+  --clay-bg: #818cf8;
+  --clay-text: #ffffff;
+}
+
+.style-claymorphism .demo-card {
+  background: #6366f1;
+  border-radius: 32px;
+  box-shadow: 16px 16px 32px rgba(79, 70, 229, 0.4),
+              inset 6px 6px 10px rgba(255, 255, 255, 0.45),
+              inset -6px -6px 10px rgba(30, 27, 75, 0.35);
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 340px;
+  color: #ffffff;
+  border: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.style-claymorphism .demo-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 20px 20px 38px rgba(79, 70, 229, 0.5),
+              inset 8px 8px 12px rgba(255, 255, 255, 0.5),
+              inset -8px -8px 12px rgba(30, 27, 75, 0.4);
+}
+
+.style-claymorphism .demo-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 18px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #ec4899;
+  color: #ffffff;
+  box-shadow: 4px 4px 8px rgba(236, 72, 153, 0.4),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.5),
+              inset -2px -2px 4px rgba(131, 24, 67, 0.4);
+}
+
+.style-claymorphism .demo-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0.85rem 0 0.4rem;
+  color: #ffffff;
+}
+
+.style-claymorphism .demo-desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.style-claymorphism .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.3rem;
+  background: #38bdf8;
+  color: #034266;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 6px 6px 14px rgba(56, 189, 248, 0.4),
+              inset 3px 3px 6px rgba(255, 255, 255, 0.6),
+              inset -3px -3px 6px rgba(3, 105, 161, 0.4);
+  transition: transform 0.15s ease;
+}
+
+.style-claymorphism .demo-btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.style-claymorphism .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.3rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.3),
+              inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease;
+}
+
+.style-claymorphism .demo-input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: #4f46e5;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  outline: none;
+  box-shadow: inset 4px 4px 8px rgba(30, 27, 75, 0.6),
+              inset -4px -4px 8px rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.75rem;
+}
+
+.style-claymorphism .demo-toggle {
+  width: 52px;
+  height: 28px;
+  background: #4f46e5;
+  border-radius: 14px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 4px 4px 6px rgba(30, 27, 75, 0.5),
+              inset -4px -4px 6px rgba(255, 255, 255, 0.2);
+}
+
+.style-claymorphism .demo-toggle.active {
+  background: #10b981;
+}
+
+.style-claymorphism .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.8);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.style-claymorphism .demo-toggle.active::after {
+  transform: translateX(24px);
+}
+
+
+/* --------------------------------------------------------------------------
+   6. CYBERPUNK / SCI-FI HUD
+   Characteristics: Neon glowing borders, chamfered corner cuts (clip-path),
+   high-tech HUD scanlines, monospace terminal accents, high contrast black/cyan/yellow
+   -------------------------------------------------------------------------- */
+.style-cyberpunk {
+  --cp-bg: #0b0c10;
+  --cp-cyan: #00ffcc;
+  --cp-yellow: #fcee0a;
+  --cp-pink: #ff0055;
+  --cp-text: #c5c6c7;
+  font-family: 'Orbitron', 'Space Grotesk', monospace;
+}
+
+.style-cyberpunk .demo-card {
+  background: #090b10;
+  border: 1px solid var(--cp-cyan);
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.25), inset 0 0 15px rgba(0, 255, 204, 0.1);
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 340px;
+  color: #fff;
+  position: relative;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.style-cyberpunk .demo-card:hover {
+  border-color: #fff;
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.45), inset 0 0 20px rgba(0, 255, 204, 0.2);
+}
+
+.style-cyberpunk .demo-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: rgba(252, 238, 10, 0.15);
+  border: 1px solid var(--cp-yellow);
+  color: var(--cp-yellow);
+  text-transform: uppercase;
+}
+
+.style-cyberpunk .demo-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin: 0.85rem 0 0.4rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+}
+
+.style-cyberpunk .demo-desc {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: #8c939f;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.style-cyberpunk .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.2rem;
+  background: var(--cp-yellow);
+  color: #000;
+  border: none;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  box-shadow: 0 0 15px rgba(252, 238, 10, 0.4);
+  transition: all 0.15s ease;
+}
+
+.style-cyberpunk .demo-btn-primary:hover {
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.style-cyberpunk .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.2rem;
+  background: transparent;
+  color: var(--cp-cyan);
+  border: 1px solid var(--cp-cyan);
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: all 0.15s ease;
+}
+
+.style-cyberpunk .demo-btn-secondary:hover {
+  background: rgba(0, 255, 204, 0.15);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+}
+
+.style-cyberpunk .demo-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: rgba(0, 255, 204, 0.04);
+  border: 1px solid rgba(0, 255, 204, 0.4);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--cp-cyan);
+  outline: none;
+  margin-bottom: 0.75rem;
+}
+
+.style-cyberpunk .demo-input:focus {
+  border-color: var(--cp-cyan);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+}
+
+.style-cyberpunk .demo-toggle {
+  width: 48px;
+  height: 22px;
+  background: #151821;
+  border: 1px solid var(--cp-cyan);
+  position: relative;
+  cursor: pointer;
+}
+
+.style-cyberpunk .demo-toggle.active {
+  background: rgba(0, 255, 204, 0.2);
+}
+
+.style-cyberpunk .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: var(--cp-cyan);
+  box-shadow: 0 0 8px var(--cp-cyan);
+  transition: transform 0.15s ease;
+}
+
+.style-cyberpunk .demo-toggle.active::after {
+  transform: translateX(26px);
+  background: var(--cp-yellow);
+  box-shadow: 0 0 8px var(--cp-yellow);
+}
+
+
+/* --------------------------------------------------------------------------
+   7. BENTO GRID (MODERN APPLE / LINEAR SAAS)
+   Characteristics: Asymmetric modular cards, rounded corners (20px), subtle 
+   radiant gradient border highlights, micro-interactions, dark premium feel
+   -------------------------------------------------------------------------- */
+.style-bento {
+  --bento-card-bg: rgba(23, 27, 38, 0.75);
+  --bento-border: rgba(255, 255, 255, 0.08);
+  --bento-accent: #60a5fa;
+}
+
+.style-bento .demo-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid var(--bento-border);
+  border-radius: 22px;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 340px;
+  color: #ffffff;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.style-bento .demo-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(96, 165, 250, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(96, 165, 250, 0.1);
+}
+
+.style-bento .demo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(96, 165, 250, 0.12);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  color: #93c5fd;
+}
+
+.style-bento .demo-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0.85rem 0 0.4rem;
+  color: #f8fafc;
+}
+
+.style-bento .demo-desc {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.style-bento .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.25rem;
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+  transition: all 0.2s ease;
+}
+
+.style-bento .demo-btn-primary:hover {
+  background: #2563eb;
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.45);
+}
+
+.style-bento .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  border: 1px solid var(--bento-border);
+  border-radius: 12px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.style-bento .demo-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.style-bento .demo-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--bento-border);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s ease;
+  margin-bottom: 0.75rem;
+}
+
+.style-bento .demo-input:focus {
+  border-color: #60a5fa;
+}
+
+.style-bento .demo-toggle {
+  width: 44px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--bento-border);
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.style-bento .demo-toggle.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.style-bento .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.style-bento .demo-toggle.active::after {
+  transform: translateX(20px);
+}
+
+
+/* --------------------------------------------------------------------------
+   8. SKEUOMORPHISM (CLASSIC TACTILE & METALLIC)
+   Characteristics: Realistic gradients, glossy bevels, real-world texture/sheen,
+   embossed text and 3D push buttons with realistic physical depth
+   -------------------------------------------------------------------------- */
+.style-skeuomorphism {
+  --skeuo-metal: linear-gradient(180deg, #f7f7f7 0%, #e1e1e1 49%, #cacaca 51%, #dfdfdf 100%);
+  --skeuo-border: #9e9e9e;
+}
+
+.style-skeuomorphism .demo-card {
+  background: linear-gradient(180deg, #fdfdfd 0%, #ebebeb 100%);
+  border: 1px solid #b0b0b0;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2), 
+              inset 0 1px 0 #ffffff, 
+              inset 0 -1px 0 #d0d0d0;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 340px;
+  color: #333333;
+}
+
+.style-skeuomorphism .demo-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: linear-gradient(180deg, #4da1ff 0%, #1e70d4 50%, #1656a8 100%);
+  border: 1px solid #104280;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.style-skeuomorphism .demo-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.85rem 0 0.4rem;
+  color: #222222;
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+.style-skeuomorphism .demo-desc {
+  font-size: 0.85rem;
+  color: #555555;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.style-skeuomorphism .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.25rem;
+  background: linear-gradient(180deg, #44bbf4 0%, #1793d1 50%, #0d7db3 100%);
+  color: #ffffff;
+  border: 1px solid #075a82;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: transform 0.1s ease;
+}
+
+.style-skeuomorphism .demo-btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 
+              inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.style-skeuomorphism .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #e2e2e2 50%, #cfcfcf 100%);
+  color: #333333;
+  border: 1px solid #999999;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15), 
+              inset 0 1px 0 #ffffff;
+}
+
+.style-skeuomorphism .demo-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: #ffffff;
+  border: 1px solid #999999;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #333;
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 0.75rem;
+}
+
+.style-skeuomorphism .demo-toggle {
+  width: 48px;
+  height: 24px;
+  background: linear-gradient(180deg, #b0b0b0 0%, #d8d8d8 100%);
+  border: 1px solid #888888;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.style-skeuomorphism .demo-toggle.active {
+  background: linear-gradient(180deg, #1656a8 0%, #3ea0f2 100%);
+}
+
+.style-skeuomorphism .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  border: 1px solid #999;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 0 #fff;
+  transition: transform 0.2s ease;
+}
+
+.style-skeuomorphism .demo-toggle.active::after {
+  transform: translateX(22px);
+}
+
+
+/* --------------------------------------------------------------------------
+   9. RETRO 90S / WINDOWS 95
+   Characteristics: Classic outset/inset beveled 3D borders, battleship gray, 
+   system pixel fonts, nostalgic titlebars with min/max/close controls
+   -------------------------------------------------------------------------- */
+.style-retro90s {
+  --w95-bg: #c0c0c0;
+  --w95-light: #ffffff;
+  --w95-dark: #808080;
+  --w95-darkest: #000000;
+  --w95-blue: #000080;
+  font-family: 'MS Sans Serif', 'Tahoma', sans-serif;
+}
+
+.style-retro90s .demo-card {
+  background: var(--w95-bg);
+  border-top: 2px solid var(--w95-light);
+  border-left: 2px solid var(--w95-light);
+  border-right: 2px solid var(--w95-darkest);
+  border-bottom: 2px solid var(--w95-darkest);
+  box-shadow: 1px 1px 0px var(--w95-dark);
+  padding: 4px;
+  width: 100%;
+  max-width: 340px;
+  color: var(--w95-darkest);
+}
+
+.style-retro90s .retro-window-titlebar {
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  color: #ffffff;
+  padding: 3px 6px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.style-retro90s .retro-window-btns {
+  display: flex;
+  gap: 2px;
+}
+
+.style-retro90s .retro-win-btn {
+  width: 14px;
+  height: 14px;
+  background: #c0c0c0;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-weight: 800;
+  color: #000;
+}
+
+.style-retro90s .retro-content-wrap {
+  padding: 0.75rem;
+}
+
+.style-retro90s .demo-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: #c0c0c0;
+  border-top: 1px solid var(--w95-darkest);
+  border-left: 1px solid var(--w95-darkest);
+  border-right: 1px solid var(--w95-light);
+  border-bottom: 1px solid var(--w95-light);
+}
+
+.style-retro90s .demo-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.style-retro90s .demo-desc {
+  font-size: 0.8rem;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.style-retro90s .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1rem;
+  background: var(--w95-bg);
+  color: var(--w95-darkest);
+  border-top: 2px solid var(--w95-light);
+  border-left: 2px solid var(--w95-light);
+  border-right: 2px solid var(--w95-darkest);
+  border-bottom: 2px solid var(--w95-darkest);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.style-retro90s .demo-btn-primary:active {
+  border-top: 2px solid var(--w95-darkest);
+  border-left: 2px solid var(--w95-darkest);
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  padding: 0.47rem 0.98rem 0.43rem 1.02rem;
+}
+
+.style-retro90s .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1rem;
+  background: var(--w95-bg);
+  color: var(--w95-darkest);
+  border-top: 2px solid var(--w95-light);
+  border-left: 2px solid var(--w95-light);
+  border-right: 2px solid var(--w95-darkest);
+  border-bottom: 2px solid var(--w95-darkest);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.style-retro90s .demo-input {
+  width: 100%;
+  padding: 0.5rem;
+  background: #ffffff;
+  border-top: 2px solid var(--w95-dark);
+  border-left: 2px solid var(--w95-dark);
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  font-size: 0.8rem;
+  outline: none;
+  margin-bottom: 0.75rem;
+}
+
+.style-retro90s .demo-toggle {
+  width: 44px;
+  height: 22px;
+  background: #ffffff;
+  border-top: 2px solid var(--w95-dark);
+  border-left: 2px solid var(--w95-dark);
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  position: relative;
+  cursor: pointer;
+}
+
+.style-retro90s .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: #c0c0c0;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  transition: transform 0.1s ease;
+}
+
+.style-retro90s .demo-toggle.active::after {
+  transform: translateX(20px);
+}
+
+
+/* --------------------------------------------------------------------------
+   10. DARK LUXURY / HAUTE COUTURE
+   Characteristics: Obsidian velvet black, champagne gold & bronze accents,
+   high-contrast serif typography (Cinzel/Playfair), dramatic editorial elegance
+   -------------------------------------------------------------------------- */
+.style-darkluxury {
+  --lux-bg: #09090b;
+  --lux-card: #121214;
+  --lux-gold: #e6af2e;
+  --lux-gold-light: #fef08a;
+  --lux-border: rgba(230, 175, 46, 0.25);
+  font-family: 'Cinzel', serif, -apple-system;
+}
+
+.style-darkluxury .demo-card {
+  background: radial-gradient(circle at 50% 0%, #1e1b18 0%, #0d0c0b 100%);
+  border: 1px solid var(--lux-border);
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(230, 175, 46, 0.08);
+  padding: 2rem 1.75rem;
+  width: 100%;
+  max-width: 340px;
+  color: #f5f5f4;
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.style-darkluxury .demo-card:hover {
+  border-color: rgba(230, 175, 46, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 35px rgba(230, 175, 46, 0.15);
+}
+
+.style-darkluxury .demo-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--lux-gold);
+  border: 1px solid rgba(230, 175, 46, 0.4);
+  background: rgba(230, 175, 46, 0.05);
+}
+
+.style-darkluxury .demo-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0.9rem 0 0.45rem;
+  background: linear-gradient(135deg, #ffffff 0%, #e6af2e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.style-darkluxury .demo-desc {
+  font-family: var(--font-main);
+  font-size: 0.825rem;
+  color: #a8a29e;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.style-darkluxury .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  background: linear-gradient(135deg, #f5d061 0%, #e6af2e 100%);
+  color: #0c0a09;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(230, 175, 46, 0.25);
+  transition: all 0.25s ease;
+}
+
+.style-darkluxury .demo-btn-primary:hover {
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.style-darkluxury .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  background: transparent;
+  color: #d6d3d1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.style-darkluxury .demo-btn-secondary:hover {
+  border-color: var(--lux-gold);
+  color: var(--lux-gold);
+}
+
+.style-darkluxury .demo-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(230, 175, 46, 0.2);
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  color: #f5f5f4;
+  outline: none;
+  margin-bottom: 0.75rem;
+  transition: border-color 0.2s ease;
+}
+
+.style-darkluxury .demo-input:focus {
+  border-color: var(--lux-gold);
+}
+
+.style-darkluxury .demo-toggle {
+  width: 46px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(230, 175, 46, 0.3);
+  position: relative;
+  cursor: pointer;
+}
+
+.style-darkluxury .demo-toggle.active {
+  background: rgba(230, 175, 46, 0.2);
+}
+
+.style-darkluxury .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: var(--lux-gold);
+  transition: transform 0.2s ease;
+}
+
+.style-darkluxury .demo-toggle.active::after {
+  transform: translateX(24px);
+}
+
+
+/* --------------------------------------------------------------------------
+   11. SYNTHWAVE / RETROWAVE 80S
+   Characteristics: Neon magenta & electric cyan gradients, 80s arcade feel,
+   glowing text shadows, wireframe horizon aesthetics
+   -------------------------------------------------------------------------- */
+.style-synthwave {
+  --synth-bg: #14052b;
+  --synth-pink: #ff2a8d;
+  --synth-cyan: #05d9e8;
+  --synth-purple: #7928ca;
+}
+
+.style-synthwave .demo-card {
+  background: linear-gradient(180deg, #1f0b3e 0%, #100322 100%);
+  border: 2px solid var(--synth-pink);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(255, 42, 141, 0.4), inset 0 0 15px rgba(5, 217, 232, 0.2);
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 340px;
+  color: #ffffff;
+  position: relative;
+}
+
+.style-synthwave .demo-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(5, 217, 232, 0.15);
+  border: 1px solid var(--synth-cyan);
+  color: var(--synth-cyan);
+  box-shadow: 0 0 8px var(--synth-cyan);
+}
+
+.style-synthwave .demo-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  font-style: italic;
+  margin: 0.85rem 0 0.4rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--synth-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(255, 42, 141, 0.6));
+}
+
+.style-synthwave .demo-desc {
+  font-size: 0.85rem;
+  color: #d1b8ff;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.style-synthwave .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.3rem;
+  background: linear-gradient(90deg, var(--synth-pink) 0%, var(--synth-purple) 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 42, 141, 0.6);
+  transition: all 0.2s ease;
+}
+
+.style-synthwave .demo-btn-primary:hover {
+  box-shadow: 0 0 25px rgba(255, 42, 141, 0.9);
+  transform: scale(1.03);
+}
+
+.style-synthwave .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.3rem;
+  background: transparent;
+  color: var(--synth-cyan);
+  border: 1px solid var(--synth-cyan);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(5, 217, 232, 0.3);
+}
+
+.style-synthwave .demo-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--synth-cyan);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(5, 217, 232, 0.2);
+  margin-bottom: 0.75rem;
+}
+
+.style-synthwave .demo-toggle {
+  width: 48px;
+  height: 24px;
+  background: #1f0b3e;
+  border: 1px solid var(--synth-pink);
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+}
+
+.style-synthwave .demo-toggle.active {
+  background: rgba(255, 42, 141, 0.3);
+}
+
+.style-synthwave .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: var(--synth-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--synth-cyan);
+  transition: transform 0.2s ease;
+}
+
+.style-synthwave .demo-toggle.active::after {
+  transform: translateX(24px);
+  background: var(--synth-pink);
+  box-shadow: 0 0 10px var(--synth-pink);
+}
+
+
+/* --------------------------------------------------------------------------
+   12. FLAT DESIGN 2.0 / MATERIAL YOU (M3)
+   Characteristics: Bold harmonious tonal palettes, rounded pill shapes (24px),
+   clean dynamic elevation without skeuomorphic clutter, friendly geometry
+   -------------------------------------------------------------------------- */
+.style-material3 {
+  --m3-surface: #fef7ff;
+  --m3-primary: #6750a4;
+  --m3-on-primary: #ffffff;
+  --m3-primary-container: #eaddff;
+  --m3-on-primary-container: #21005d;
+  --m3-secondary-container: #e8def8;
+  --m3-outline: #79747e;
+  --m3-text: #1d1b20;
+  font-family: 'Roboto', -apple-system, sans-serif;
+}
+
+.style-material3 .demo-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 340px;
+  color: var(--m3-text);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(121, 116, 126, 0.15);
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.style-material3 .demo-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.style-material3 .demo-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--m3-secondary-container);
+  color: #1d192b;
+}
+
+.style-material3 .demo-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0.85rem 0 0.4rem;
+  color: var(--m3-text);
+}
+
+.style-material3 .demo-desc {
+  font-size: 0.875rem;
+  color: #49454f;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.style-material3 .demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  background: var(--m3-primary);
+  color: var(--m3-on-primary);
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(103, 80, 164, 0.3);
+  transition: all 0.2s ease;
+}
+
+.style-material3 .demo-btn-primary:hover {
+  box-shadow: 0 4px 10px rgba(103, 80, 164, 0.4);
+}
+
+.style-material3 .demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  background: var(--m3-secondary-container);
+  color: #1d192b;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.style-material3 .demo-btn-secondary:hover {
+  background: #ded4f0;
+}
+
+.style-material3 .demo-input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  background: #f4eff4;
+  border: 1px solid var(--m3-outline);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: var(--m3-text);
+  outline: none;
+  margin-bottom: 0.75rem;
+  transition: border-color 0.2s ease;
+}
+
+.style-material3 .demo-input:focus {
+  border-color: var(--m3-primary);
+  border-width: 2px;
+}
+
+.style-material3 .demo-toggle {
+  width: 52px;
+  height: 32px;
+  background: #e7e0ec;
+  border: 2px solid var(--m3-outline);
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.style-material3 .demo-toggle.active {
+  background: var(--m3-primary);
+  border-color: var(--m3-primary);
+}
+
+.style-material3 .demo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background: var(--m3-outline);
+  border-radius: 50%;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.style-material3 .demo-toggle.active::after {
+  transform: translateX(20px);
+  background: #ffffff;
+}
