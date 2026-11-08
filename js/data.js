@@ -514,10 +514,10 @@ const CHAMELEON_COMPONENTS = {
       <div class="demo-card" style="max-width: 380px;">
         <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
           <div style="width: 54px; height: 54px; border-radius: 50%; background: linear-gradient(135deg, #38bdf8, #818cf8); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; color: #fff; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-            AG
+            SZ
           </div>
           <div>
-            <h4 class="demo-title" style="margin: 0; font-size: 1.15rem;">Arjun Sharma</h4>
+            <h4 class="demo-title" style="margin: 0; font-size: 1.15rem;">Shaikh Zaid</h4>
             <span class="demo-badge" style="margin-top: 4px;">Staff UI Architect</span>
           </div>
         </div>
